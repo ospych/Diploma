@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.filters.FiltersFragment"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите категорию"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="14dp"/>
+
+    <CheckBox
+        android:id="@+id/categoryAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:text="Все"
+        android:layout_marginLeft="14dp"
+        android:layout_below="@+id/mainText"
+        style="@style/CustomCheckbox02"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/categoryAll"
+        />
+    <Button
+        android:id="@+id/chooseBT"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:text="Выбрать"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

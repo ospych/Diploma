@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_tours">
+
+    <fragment
+        android:id="@+id/navigation_tours"
+        android:name="com.example.intourist.ui.tours.ToursFragment"
+        android:label="@string/title_tours"
+        tools:layout="@layout/fragment_tours" >
+        <action
+            android:id="@+id/action_navigation_tours_to_filtersFragment"
+            app:destination="@id/filtersFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favourites"
+        android:name="com.example.intourist.ui.favourites.FavouriteFragment"
+        android:label="@string/title_favourite"
+        tools:layout="@layout/fragment_favourite" />
+
+    <fragment
+        android:id="@+id/navigation_about_us"
+        android:name="com.example.intourist.ui.aboutUs.AboutUsFragment"
+        android:label="@string/title_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/filtersFragment"
+        android:name="com.example.intourist.ui.filters.FiltersFragment"
+        android:label="fragment_filters"
+        tools:layout="@layout/fragment_filters" >
+        <action
+            android:id="@+id/action_filtersFragment_to_navigation_tours"
+            app:destination="@id/navigation_tours" />
+    </fragment>
+</navigation>

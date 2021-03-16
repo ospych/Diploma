@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">InTourist</string>
+    <string name="title_tours">Все туры</string>
+    <string name="title_favourite">Избранное</string>
+    <string name="title_about_us">О нас</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_company">О компании</string>
+    <string name="textView1">Главное походное сообщество страны! \nВещаем о самых бюджетных походах на рынке, разведывательных вылазках, горных новостях и многое другое!</string>
+    <string name="textView2">Нами предоставляемые услуги:\n- Показ самых красивых мест Кыргызстана\n- Туры в уникальные достопримечательности\n- От простых туров до экстремальных\n- Корпоративные и частные туры</string>
+    <string name="our_rules">Наши правила</string>
+    <string name="textView3">- Независимо от погоды мы идём в поход\n- Оплата не возвращается, возможен перенос оплаты на другой тур\n- Перенос тура возможен не дальше 1-2 недели вперёд\n- Если вы записались на субботу: при оповещении не позднее чем четверг 12:00 дня, после перенос невозможен\n- Если вы записались на воскресенье: при оповещении не позднее чем пятница 12:00 дня, после перенос невозможен\n- С собой необходимо иметь паспорт или удостоверение личности\n- Если вы не можете поехать в тур, и сообщаете позднее четверга/пятницы 12:00, то замену необходимо искать самостоятельно\n- В случае, если вы не пришли на точку сбора и не предупредили компанию, возврат и перенос средств невозможен, так как ваше место уехало пустым</string>
+    <string name="attention">Внимание</string>
+    <string name="textViewLast">- Мы не отвечаем за погоду в горах, погода может быть: дождливой, туманной, холодной, жаркой. Погода в горах непредсказуема\n- Ответственность за свою экипировку/одежду участник тура несёт самостоятельно\n- Дети до 5-ти лет могут поехать бесплатно, без права на занятия места</string>
+    <string name="about_us">О нас</string>
+    <string name="rules_and">Правила и обязательства</string>
+    <string name="new_chat">Новый разговор</string>
+    <string name="have_got_question">Есть вопросы? Мы ответим!</string>
+    <string name="write_to_manager">Написать менеджеру</string>
+    <string name="for_register_fill_form">Для регистрации \n заполните следующую форму \n Затем выберите из списка Gmail</string>
+    <string name="your_name">Введите ваше имя</string>
+    <string name="your_phone">Введите ваш телефонный номер</string>
+    <string name="receipt_button">Квитанция</string>
+    <string name="send_button">Отправить</string>
+    <string name="payment">Способы оплаты</string>
+    <string name="extra_information">Дополнительная информация</string>
+    <string name="register">Регистрация</string>
+</resources>
