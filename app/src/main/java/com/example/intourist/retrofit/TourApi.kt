@@ -9,6 +9,8 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
+import java.time.LocalDate
+import java.util.*
 
 interface TourApi {
 
@@ -17,6 +19,9 @@ interface TourApi {
 
     @GET("/category")
     suspend fun getCategories(): Response<List<Category>>
+
+    @GET("/category")
+    fun getCategory(): Call<MutableList<Category>>
 
     @GET("/{id}")
     suspend fun getSingleTour(
@@ -30,7 +35,8 @@ interface TourApi {
 
     @GET("/")
     suspend fun getFilteredTours(
-        @Query("category") category: String
+        @Query("category") category: String,
+        @Query("date") date: String
     ) : Response<List<Tour>>
 
 }

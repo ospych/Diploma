@@ -8,9 +8,14 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.intourist.R
 import kotlinx.android.synthetic.main.fragment_register.*
 
@@ -26,9 +31,9 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         super.onViewCreated(view, savedInstanceState)
 
         val toolbar = (activity as AppCompatActivity).supportActionBar
-        toolbar?.title = ""
-        toolbar?.setDisplayHomeAsUpEnabled(false)
-        toolbar?.hide()
+        toolbar?.setDisplayHomeAsUpEnabled(true)
+        toolbar?.title = "Регистрация"
+        toolbar?.show()
 
         val titleTour = arguments?.getString("TourTitle")
         Log.v("Title", titleTour.toString())
@@ -80,6 +85,11 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
                 e.printStackTrace()
             }
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+                || super.onOptionsItemSelected(item)
     }
 
 }

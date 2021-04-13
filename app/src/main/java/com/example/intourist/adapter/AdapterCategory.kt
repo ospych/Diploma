@@ -45,12 +45,12 @@ class AdapterCategory : RecyclerView.Adapter<AdapterCategory.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val tour = differ.currentList[position]
-        holder.itemView.apply {
-            holder.itemView.categoryCB.text = tour.name
-            holder.itemView.categoryCB.setOnClickListener {
-                onItemClickListener?.let { it(tour) }
-            }
-        }
+//        holder.itemView.apply {
+//            holder.itemView.categoryCB.text = tour.name
+//            holder.itemView.categoryCB.setOnClickListener {
+//                onItemClickListener?.let { it(tour) }
+//            }
+//        }
     }
 
     fun setOnItemClickListener(listener: (Category) -> Unit) {

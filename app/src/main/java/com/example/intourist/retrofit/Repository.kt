@@ -7,6 +7,8 @@ import com.example.intourist.retrofit.model.Tour
 import com.example.intourist.retrofit.model.TourDetail
 import retrofit2.Response
 import java.lang.Exception
+import java.time.LocalDate
+import java.util.*
 
 class Repository {
     suspend fun getTours(): Response<List<Tour>> {
@@ -21,7 +23,7 @@ class Repository {
         return RetrofitInstance.api.getSingleTour(number)
     }
 
-    suspend fun getFilteredTour(filter: String) : Response<List<Tour>> {
-        return RetrofitInstance.api.getFilteredTours(filter)
+    suspend fun getFilteredTour(category : String, date: String) : Response<List<Tour>> {
+        return RetrofitInstance.api.getFilteredTours(category, date)
     }
 }

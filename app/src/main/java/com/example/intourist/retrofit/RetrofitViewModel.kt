@@ -8,8 +8,11 @@ import com.example.intourist.retrofit.Repository
 import com.example.intourist.retrofit.model.Category
 import com.example.intourist.retrofit.model.Tour
 import com.example.intourist.retrofit.model.TourDetail
+import com.example.intourist.utils.log
 import kotlinx.coroutines.launch
 import retrofit2.Response
+import java.time.LocalDate
+import java.util.*
 
 class RetrofitViewModel(private val repository: Repository) : ViewModel() {
 
@@ -28,7 +31,11 @@ class RetrofitViewModel(private val repository: Repository) : ViewModel() {
     fun getCategories() {
         viewModelScope.launch {
             val response: Response<List<Category>> = repository.getCategories()
-            myResponseCategory.value = response
+            try {
+                myResponseCategory.value = response
+            } catch (e :Exception){
+                log(e.toString())
+            }
         }
     }
 
@@ -39,9 +46,9 @@ class RetrofitViewModel(private val repository: Repository) : ViewModel() {
         }
     }
 
-    fun getFilteredTour(filter: String) {
+    fun getFilteredTour(category : String ,date: String) {
         viewModelScope.launch {
-            val response: Response<List<Tour>> = repository.getFilteredTour(filter)
+            val response: Response<List<Tour>> = repository.getFilteredTour(category, date)
             myResponseFiltered.value = response
         }
     }

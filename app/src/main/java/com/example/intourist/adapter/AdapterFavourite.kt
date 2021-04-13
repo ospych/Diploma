@@ -1,5 +1,6 @@
 package com.example.intourist.adapter
 
+import android.annotation.SuppressLint
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,8 @@ import com.bumptech.glide.Glide
 import com.example.intourist.R
 import com.example.intourist.room.data.TourRoom
 import kotlinx.android.synthetic.main.tour_fav.view.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class AdapterFavourite : RecyclerView.Adapter<AdapterFavourite.MyViewHolder>() {
 
@@ -44,13 +47,18 @@ class AdapterFavourite : RecyclerView.Adapter<AdapterFavourite.MyViewHolder>() {
 
     private var onItemClickListener: ((TourRoom) -> Unit)? = null
 
+    @SuppressLint("SimpleDateFormat")
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val tour = differ.currentList[position]
         holder.itemView.apply {
+            val dateStr = tour.date
+            var sdf = SimpleDateFormat("yyyy-MM-dd")
+            val date: Date? = sdf.parse(dateStr)
+            sdf = SimpleDateFormat("dd.MM.yyyy")
             Glide.with(this).load(tour.image).into(image)
             titleFav.text = tour.title
             priceFav.text = tour.price.toString()
-            dateFav.text = tour.date
+            dateFav.text = sdf.format(date)
             placeFav.text = tour.places
 
             Log.v("AdapterInside", tour.title)

@@ -3,14 +3,14 @@
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
     android:orientation="vertical">
-    <CheckBox
-        android:id="@+id/categoryCB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:text="Category"
-        android:layout_marginLeft="14dp"
-        style="@style/CustomCheckbox02"/>
+<!--    <CheckBox-->
+<!--        android:id="@+id/categoryCB"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="14dp"-->
+<!--        android:text="Category"-->
+<!--        android:layout_marginLeft="14dp"-->
+<!--        style="@style/CustomCheckbox02"/>-->
 </LinearLayout>
 
 

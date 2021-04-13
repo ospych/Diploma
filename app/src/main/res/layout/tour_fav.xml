@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="14dp"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
@@ -60,15 +60,17 @@
 
             <TextView
                 android:id="@+id/placeFav"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="14dp"
-                android:textSize="18sp"
+                android:layout_marginEnd="14dp"
+                android:textSize="16sp"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/titleFav"
                 android:layout_marginLeft="14dp" />
             <LinearLayout
+                android:layout_marginTop="5dp"
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -113,7 +115,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@color/teal_200"
+                    android:background="@color/teal_700"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
                     android:paddingTop="14dp"
@@ -134,11 +136,13 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:textSize="18sp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginLeft="6dp"
                         android:visibility="visible"
+                        android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imagePrice"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:textColor="@color/white"/>
+                        app:layout_constraintTop_toTopOf="parent" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

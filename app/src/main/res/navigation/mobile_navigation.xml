@@ -29,10 +29,20 @@
     <fragment
         android:id="@+id/filtersFragment"
         android:name="com.example.intourist.ui.filters.FiltersFragment"
-        android:label="fragment_filters"
+        android:label="Фильтрация"
         tools:layout="@layout/fragment_filters" >
         <action
             android:id="@+id/action_filtersFragment_to_navigation_tours"
             app:destination="@id/navigation_tours" />
     </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.intourist.ui.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.intourist.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
 </navigation>

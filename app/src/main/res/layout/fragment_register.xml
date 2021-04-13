@@ -32,7 +32,9 @@
         android:layout_marginLeft="14dp"
         android:layout_marginStart="14dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginTop="14dp" />
+        android:layout_marginTop="14dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_focused"/>
     <EditText
         android:id="@+id/phoneET"
         android:layout_width="match_parent"
@@ -41,7 +43,9 @@
         android:layout_marginLeft="14dp"
         android:layout_marginStart="14dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginTop="14dp" />
+        android:layout_marginTop="14dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_focused"/>
     <ImageView
         android:id="@+id/receipt"
         android:layout_width="250dp"
@@ -63,6 +67,7 @@
             android:layout_marginStart="14dp"
             android:layout_marginLeft="14dp"
             android:text="@string/receipt_button"
+            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -74,6 +79,7 @@
             android:layout_marginEnd="14dp"
             android:layout_marginRight="14dp"
             android:text="@string/send_button"
+            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"

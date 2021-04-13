@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.filters.FiltersFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/bg_color">
     <TextView
         android:id="@+id/mainText"
         android:layout_marginTop="20dp"
@@ -16,28 +17,83 @@
         android:layout_marginLeft="14dp"
         android:layout_marginBottom="14dp"/>
 
-    <CheckBox
-        android:id="@+id/categoryAll"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_below="@+id/mainText">
+        <Spinner
+            android:id="@+id/categoryFilter"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/spinner_filter_bg"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingEnd="25dp"
+            android:paddingRight="25dp"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_down"
+            app:layout_constraintBottom_toBottomOf="@+id/categoryFilter"
+            app:layout_constraintEnd_toEndOf="@+id/categoryFilter"
+            app:layout_constraintTop_toTopOf="@+id/categoryFilter" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="14dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:text="Все"
+        android:text="Выберите дату"
         android:layout_marginLeft="14dp"
-        android:layout_below="@+id/mainText"
-        style="@style/CustomCheckbox02"/>
+        android:layout_marginBottom="14dp"
+        android:layout_below="@+id/constraint"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewCategory"
+    <LinearLayout
+        android:id="@+id/periodLayoutDate"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/categoryAll"
-        />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_below="@+id/dateText">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dateFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="@drawable/spinner_filter_bg"
+                android:drawableRight="@drawable/ic_date"
+                android:drawableTint="#358AED"
+                android:padding="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
     <Button
         android:id="@+id/chooseBT"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginBottom="20dp"
         android:text="Выбрать"
+        android:textAllCaps="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
 
